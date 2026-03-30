@@ -1,6 +1,13 @@
 {
   "participant_id": {
-    "Description": "The prticipant ID set in the HBN dataset"
+    "Description": "The prticipant ID set in the HBN dataset",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
   },
   "release_number": {
     "Description": "The release in which the dataset was made available via the HBN project"
@@ -11,11 +18,49 @@
     "Levels": {
       "F": "Female",
       "M": "Male"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "F": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        },
+        "M": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        }
+      },
+      "MissingValues": []
     }
   },
   "age": {
     "LongName": "Age",
-    "Description": "Age in years"
+    "Description": "Age in years",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "ehq_total": {
     "LongName": "Handedness",
@@ -78,5 +123,11 @@
   },
   "symbolSearch": {
     "Description": "Availability status of the symbol search task"
+  },
+  "seqLearning6target": {
+    "Description": ""
+  },
+  "seqLearning8target": {
+    "Description": ""
   }
 }
